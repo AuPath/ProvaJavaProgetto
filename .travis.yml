@@ -1,4 +1,10 @@
 language: java
 jdk:
  - openjdk8
-
+addons:
+ sonarcloud:
+ organization: "aupath"
+ token:
+  secure: $SONAR_TOKEN
+script:
+ - mvn clean verify sonar:sonar
