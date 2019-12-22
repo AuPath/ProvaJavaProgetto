@@ -10,4 +10,4 @@ addons:
    secure: $SONAR_TOKEN
 
 script:
- - mvn clean verify sonar:sonar
+ - mvn clean verify sonar:sonar -Dsonar.branch=master
